@@ -1,0 +1,38 @@
+/* .App {
+    overflow: scroll;
+}     */
+
+    .characters-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: repeat(6, 150px);
+  }
+  
+  .modal {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    transform: translate(-25,  -25%);
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .modal-content {
+    height: 50vh;
+    width: 50vw;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image {
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 20px 0 black  ;
+  }
+  
