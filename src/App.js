@@ -1,12 +1,9 @@
 import Characters from "./screens/Characters.jsx";
 import CharacterCreate from './screens/CharacterCreate.jsx'
-
 import {Routes, Route, Link} from 'react-router-dom';
 import "./App.css";
 
 export default function App() {
-
-
 
 
   return (
@@ -23,6 +20,13 @@ export default function App() {
   );
 }
 
-
+// charId:22
+// firstName:"Ygritte"
+// lastName:"None"
+// fullName:"Ygritte"
+// title:"Spearwife"
+// family:"Free Folk"
+// image:"ygritte.jpg"
+// imageUrl:"https://thronesapi.com/assets/images/ygritte.jpg"
 
 
