@@ -4,6 +4,16 @@
     overflow: scroll;
   }
 
+.navigation :visited {
+  color: white;
+}
+
+.navigation {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
   .Body {
     text-align: center;
   }

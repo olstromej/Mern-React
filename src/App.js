@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <div className="Body">
-        <nav>
+        <nav className="navigation">
             <Link to="/">Characters</Link>
             <Link to="/add-character">Add Character</Link>
         </nav>
