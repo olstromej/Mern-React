@@ -1,53 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import './App.css'
+import Characters from "./screens/Characters.jsx";
+import CharacterCreate from './screens/CharacterCreate.jsx'
 
-export default function Characters() {
-    const [characters, setCharacters] = useState([])
-    const [character, setCharacter] = useState({})
-    let [modalToggle, setModalToggle] = useState(false)
+import {Routes, Route, Link} from 'react-router-dom';
+import "./App.css";
+
+export default function App() {
 
 
-useEffect(() => {
-    apiCall()
-}, [])
 
-function apiCall() {
-    fetch("https://project-2-api-production.up.railway.app/characters")
-    .then((res) => res.json())
-    .then((data) => setCharacters(data))
-}
 
-function display() {
-    setModalToggle(prev => !prev)
-}
-
-function handleClick(charInfo) {
-    setCharacter(charInfo)
-    display()
-}
-
-return (
+  return (
     <div className="Body">
-      <div className="characters-list">
-        {characters.slice(0, 36).map((character, index) => (
-          <div className="character-container" onClick={() => handleClick(character)} key={index}>
-            <img className="image" src={character.imageUrl} alt={character.firstName}/>
-          </div>
-        ))}
-      </div>
-      {modalToggle ?
-        <div className="modal">
-          <div className="modal-content">
-            <p>Name - {character.fullName}</p>
-            <p>Title - {character.title}</p>
-            <p>Family - {character.family}</p>
-            <button onClick={display}>Return</button>
-          </div>
-        </div>
-        :
-        null
-      }
+        <nav>
+            <Link to="/">Characters</Link>
+            <Link to="/add-character">Add Character</Link>
+        </nav>
+      <Routes>
+        <Route path="/" element={<Characters />} />
+        <Route path="/add-character" element={<CharacterCreate />} />
+      </Routes>
     </div>
-);
+  );
 }
+
+
+
 

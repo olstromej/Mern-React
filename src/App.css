@@ -1,6 +1,12 @@
-/* .App {
+.App {
+    text-align: center;
+    height: 100vh;
     overflow: scroll;
-}     */
+  }
+
+  .Body {
+    text-align: center;
+  }
 
     .characters-list {
     display: grid;
@@ -10,7 +16,7 @@
   }
   
   .modal {
-    position: absolute;
+    position: fixed;
     left: 25%;
     top: 25%;
     transform: translate(-25,  -25%);
@@ -24,15 +30,36 @@
     color: white;
     font-weight: bold;
     background-color: black;
-    border-radius: 20%;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: scroll;
   }
 
   .image {
     height: 100px;
     width: 100px;
-    box-shadow: 0 0 20px 0 black  ;
+    box-shadow: 0 0 40px 0 whitesmoke  ;
   }
   
+  .image:hover {
+    box-shadow: 0 0 40px 0 black;
+    cursor: wait;
+  }
+
+  button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px solid #555555;
+  }
+
+  .create-form {
+    display: flex;
+    flex-direction: column;
+  }
