@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import { createCharacter } from "../services/characters.js";
 
 export default function CharacterCreate() {
@@ -13,9 +14,12 @@ export default function CharacterCreate() {
     imageUrl: "",
   });
 
+  let navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createCharacter(character);
+    navigate('/', { replace: true})
   };
 
   const handleChange = (e) => {
