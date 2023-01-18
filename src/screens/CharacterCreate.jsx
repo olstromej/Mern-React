@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { updateCharacter } from "../services/characters.js";
+import { createCharacter } from "../services/characters.js";
 
 export default function CharacterCreate() {
   const [character, setCharacter] = useState({
-    charId: "",
+    charId: 0,
     firstName: "",
     lastName: "",
     fullName: "",
@@ -15,7 +15,7 @@ export default function CharacterCreate() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await updateCharacter(character);
+    await createCharacter(character);
   };
 
   const handleChange = (e) => {
@@ -33,7 +33,7 @@ export default function CharacterCreate() {
       <h2>Create GOT Character</h2>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
-          type="text"
+          type="number"
           placeholder="Please enter your CharID"
           name="charId"
           value={character.charId}
