@@ -18,8 +18,7 @@ Below are the directions to utilze the React application
 1. Click each picture to get information on each character
 2. After information is displayed the user can either return to previous screen to choose another character or delete the character.
 3. The Add Character link at the top of the page will allow the user to add a new character by following the text box.
-4. Once text box's are filled out the user can push the 'Create New GOT Character!!' to create the new character.
-5. Push Characters button at the top of the page to go back to the Characters page/Home page.
+4. Once text box's are filled out the user can push the 'Create New GOT Character!!' to create the new character. Once character is created the page will automatically relaod to the home page/character page
 
 <br></br>
 ## Screenshots
