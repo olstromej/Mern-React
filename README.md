@@ -6,7 +6,7 @@ This project was built with React and is a front end to one of my classmates dep
 
 ## Deployed Link
 ---
-
+https://beautiful-fudge-3091f4.netlify.app/
 
 
 <br></br>
